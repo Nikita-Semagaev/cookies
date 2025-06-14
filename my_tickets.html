@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои билеты - Аврора</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-left">
+                <a href="index.html" class="logo">Аврора</a>
+                <div class="header-contact">
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <span class="contact-text">+7 (495) 123-45-67</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">✉️</span>
+                        <span class="contact-text">info@kinoteatr.rf</span>
+                    </div>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Фильмы</a></li>
+                    <li><a href="schedule.html">Кинозалы</a></li>
+                    <li><a href="my_tickets.html" id="myTicketsLink" style="display: none;">Мои билеты</a></li>
+                    <li><a href="login.html" id="loginLink">Войти</a></li>
+                    <li><a href="#" id="logoutLink" style="display: none;">Выйти</a></li>
+                </ul>
+            </nav>
+            <button class="burger" id="burgerMenu" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="my-tickets-section">
+                <h1>Мои билеты</h1>
+                <div id="ticketsContainer">
+                    <!-- Билеты будут добавлены динамически -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-info">
+                <div class="footer-logo">Аврора</div>
+                <p>Современный кинотеатр с лучшими фильмами и комфортными залами.</p>
+            </div>
+            <div class="footer-nav">
+                <h3>Навигация</h3>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="schedule.html">Расписание</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Контакты</h3>
+                <p>Москва, ул. Примерная, 123</p>
+                <p>Телефон: +7 (495) 123-45-67</p>
+                <p>Email: info@kinoteatr.rf</p>
+            </div>
+            <div class="footer-hours">
+                <h3>Режим работы</h3>
+                <p>Пн-Чт: 10:00 - 23:00</p>
+                <p>Пт-Вс: 10:00 - 01:00</p>
+                <p>Касса закрывается за 30 минут до последнего сеанса</p>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2024 Кинотеатр. РФ. Все права защищены.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+    <script src="my_tickets.js"></script>
+</body>
+</html> 

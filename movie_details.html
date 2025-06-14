@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Детали фильма - Аврора</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="header-left">
+                <a href="index.html" class="logo">Аврора</a>
+                <div class="header-contact">
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <span class="contact-text">+7 (495) 123-45-67</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">✉️</span>
+                        <span class="contact-text">info@kinoteatr.rf</span>
+                    </div>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Фильмы</a></li>
+                    <li><a href="schedule.html">Кинозалы</a></li>
+                    <li><a href="my_tickets.html" id="myTicketsLink" style="display: none;">Мои билеты</a></li>
+                    <li><a href="login.html" id="loginLink">Войти</a></li>
+                    <li><a href="#" id="logoutLink" style="display: none;">Выйти</a></li>
+                </ul>
+            </nav>
+            <button class="burger" id="burgerMenu" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="movie-details-hero">
+            <div class="container movie-hero-content">
+                <img src="#" alt="Постер фильма" class="movie-details-poster">
+                <div class="movie-info-summary">
+                    <h1 class="movie-title">Название фильма</h1>
+                    <div class="movie-meta"><div class="movie-duration"></div> | <div class="movie-genre"></div><div class="rating"></div></div>
+                    <p class="movie-short-description"></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="movie-full-details">
+            <div class="container details-container">
+                <div class="movie-description-block">
+                    <h2>О фильме</h2>
+                    <p class="movie-full-description"></p>
+                    <div class="movie-meta-grid">
+                        <div class="meta-item">
+                            <p>Описание</p>
+                            <p class="meta-description-text"></p>
+                        </div>
+                        <div class="meta-item">
+                            <p>Жанр</p>
+                            <p class="meta-genre-text"></p>
+                        </div>
+                        <div class="meta-item">
+                            <p>Рейтинг</p>
+                            <p class="meta-rating-text"></p>
+                        </div>
+                         <div class="meta-item">
+                            <p>Продолжительность</p>
+                            <p class="meta-duration-text"></p>
+                        </div>
+                        <div class="meta-item">
+                            <p>Год выпуска</p>
+                            <p class="meta-year-text"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="schedule-block">
+                    <h2>Расписание сеансов</h2>
+                    <!-- Блоки для каждого дня расписания будут добавлены здесь JS -->
+                    <div id="schedule-container">
+                        <!-- Пример структуры одного дня (будет сгенерирован JS) -->
+                        <!--
+                        <div class="day-schedule">
+                            <h4>Вторник, 3 июня</h4>
+                            <div class="time-buttons">
+                                <button class="time-button">20:00</button>
+                                <button class="time-button">23:30</button>
+                            </div>
+                        </div>
+                        -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Модальное окно выбора мест -->
+    <div id="seatingModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="modalHallInfo">Зал: <span id="hallNumber"></span> - Время: <span id="sessionTime"></span></h2>
+            <div class="hall-tabs">
+                <button class="hall-tab active" data-hall="regular">Обычный</button>
+                <button class="hall-tab" data-hall="3d">3D</button>
+                <button class="hall-tab" data-hall="imax">IMAX</button>
+                <button class="hall-tab" data-hall="vip">VIP</button>
+            </div>
+            <div class="screen">Экран</div>
+            <div class="seating-plan" id="seatingPlan"></div>
+            <div class="legend">
+                <div class="legend-item"><span class="seat available"></span>Свободно</div>
+                <div class="legend-item"><span class="seat selected"></span>Выбрано</div>
+                <div class="legend-item"><span class="seat occupied"></span>Занято</div>
+            </div>
+            <div class="booking-summary">
+                <p>Выбрано мест: <span id="selectedSeatsCount">0</span> (<span id="selectedSeatsInfo"></span>)</p>
+                <p>Итого к оплате: <span id="totalPrice">0</span> ₽</p>
+            </div>
+            <button id="bookTicketsBtn">Забронировать билеты</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-info">
+                <div class="footer-logo">Аврора</div>
+                <p>Современный кинотеатр с лучшими фильмами и комфортными залами.</p>
+            </div>
+            <div class="footer-nav">
+                <h3>Навигация</h3>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="schedule.html">Расписание</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Контакты</h3>
+                <p>Москва, ул. Примерная, 123</p>
+                <p>Телефон: +7 (495) 123-45-67</p>
+                <p>Email: avrora@mail.ru</p>
+            </div>
+            <div class="footer-hours">
+                <h3>Режим работы</h3>
+                <p>Пн-Чт: 10:00 - 23:00</p>
+                <p>Пт-Вс: 10:00 - 01:00</p>
+                <p>Касса закрывается за 30 минут до последнего сеанса</p>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2024 Кинотеатр. РФ. Все права защищены.
+        </div>
+    </footer>
+
+<script src="script.js"></script>
+<script src="auth.js"></script>
+<script src="movie_details.js"></script>
+</body>
+</html> 

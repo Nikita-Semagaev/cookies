@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кинозалы - Аврора</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-left">
+                <a href="index.html" class="logo">Аврора</a>
+                <div class="header-contact">
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <span class="contact-text">+7 (495) 123-45-67</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">✉️</span>
+                        <span class="contact-text">info@kinoteatr.rf</span>
+                    </div>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Фильмы</a></li>
+                    <li><a href="schedule.html">Кинозалы</a></li>
+                    <li><a href="my_tickets.html" id="myTicketsLink" style="display: none;">Мои билеты</a></li>
+                    <li><a href="login.html" id="loginLink">Войти</a></li>
+                    <li><a href="#" id="logoutLink" style="display: none;">Выйти</a></li>
+                </ul>
+            </nav>
+            <button class="burger" id="burgerMenu" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="halls-section">
+                <h1>Наши кинозалы</h1>
+                <div class="halls-grid">
+                    <div class="hall-card">
+                        <img src="images/regular-hall.jpg" alt="Обычный зал" class="hall-image">
+                        <div class="hall-info">
+                            <h2>Обычный зал</h2>
+                            <p class="hall-description">Классический кинозал с комфортными креслами и отличной акустикой. Идеально подходит для просмотра фильмов любого жанра.</p>
+                            <ul class="hall-features">
+                                <li>8 рядов по 10 мест</li>
+                                <li>Стандартные кресла</li>
+                                <li>Цена билета: 350 ₽</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="hall-card">
+                        <img src="images/3d-hall.jpg" alt="3D зал" class="hall-image">
+                        <div class="hall-info">
+                            <h2>3D зал</h2>
+                            <p class="hall-description">Современный зал с технологией RealD 3D, обеспечивающей максимально реалистичное 3D-изображение и мощный звук.</p>
+                            <ul class="hall-features">
+                                <li>10 рядов по 12 мест</li>
+                                <li>Кресла с подголовниками</li>
+                                <li>Цена билета: 450 ₽</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="hall-card">
+                        <img src="images/imax-hall.jpg" alt="IMAX зал" class="hall-image">
+                        <div class="hall-info">
+                            <h2>IMAX зал</h2>
+                            <p class="hall-description">Премиальный зал с гигантским экраном и революционной системой звука IMAX. Погрузитесь в мир кино с максимальной реалистичностью.</p>
+                            <ul class="hall-features">
+                                <li>7 рядов по 9 мест</li>
+                                <li>Премиум-кресла с откидной спинкой</li>
+                                <li>Цена билета: 600 ₽</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="hall-card">
+                        <img src="images/vip-hall.jpg" alt="VIP зал" class="hall-image">
+                        <div class="hall-info">
+                            <h2>VIP зал</h2>
+                            <p class="hall-description">Эксклюзивный зал с дизайнерскими креслами-реклайнерами и индивидуальным обслуживанием. Максимальный комфорт для самых требовательных зрителей.</p>
+                            <ul class="hall-features">
+                                <li>5 рядов по 7 мест</li>
+                                <li>Кресла-реклайнеры с подогревом</li>
+                                <li>Цена билета: 800 ₽</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-info">
+                <div class="footer-logo">Аврора</div>
+                <p>Современный кинотеатр с лучшими фильмами и комфортными залами.</p>
+            </div>
+            <div class="footer-nav">
+                <h3>Навигация</h3>
+                <ul>
+                    <li><a href="index.html">Фильмы</a></li>
+                    <li><a href="schedule.html">Кинозалы</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Контакты</h3>
+                <p>Москва, ул. Примерная, 123</p>
+                <p>Телефон: +7 (495) 123-45-67</p>
+                <p>Email: admin@mail.tu</p>
+            </div>
+            <div class="footer-hours">
+                <h3>Режим работы</h3>
+                <p>Пн-Чт: 10:00 - 23:00</p>
+                <p>Пт-Вс: 10:00 - 01:00</p>
+                <p>Касса закрывается за 30 минут до последнего сеанса</p>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2024 Кинотеатр. РФ. Все права защищены.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html> 
