@@ -1,13 +1,215 @@
-<!doctype html>
-<html lang="en" data-critters-container>
+<!DOCTYPE html>
+<html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <title>Cookies</title>
-  <base href="/cookies/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-<style>*{margin:0;padding:0}@font-face{font-family:Steppe-Book;src:url(Steppe-Book.a7fc3ee738d3939e.ttf)}body{background-color:#5243f4;font-family:Steppe-Book,sans-serif;color:#fff}</style><link rel="stylesheet" href="styles.eed203796b0c98f0.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.eed203796b0c98f0.css"></noscript></head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аврора</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
 <body>
-  <app-root></app-root>
-<script src="runtime.f3610e95923c90ed.js" type="module"></script><script src="polyfills.f79f2a9fbeff8867.js" type="module"></script><script src="main.321492925cd245d5.js" type="module"></script></body>
-</html>
+
+    <header>
+        <div class="container">
+            <div class="header-left">
+                <a href="index.html" class="logo">Аврора</a>
+                <div class="header-contact">
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <span class="contact-text">+7 (495) 123-45-67</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">✉️</span>
+                        <span class="contact-text">info@kinoteatr.rf</span>
+                    </div>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Фильмы</a></li>
+                    <li><a href="schedule.html">Кинозалы</a></li>
+                    <li><a href="my_tickets.html" id="myTicketsLink" style="display: none;">Мои билеты</a></li>
+                    <li><a href="login.html" id="loginLink">Войти</a></li>
+                    <li><a href="#" id="logoutLink" style="display: none;">Выйти</a></li>
+                </ul>
+            </nav>
+            <button class="burger" id="burgerMenu" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Добро пожаловать в кинотеатр Аврора</h1>
+            <div class="hero-navigation">
+                <span class="prev">&#10094;</span>
+                <span class="next">&#10095;</span>
+            </div>
+            </div>
+            <div class="slide-indicators">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+        </div>
+    </section>
+
+    <section class="search-bar">
+        <div class="container">
+            <input type="text" placeholder="Поиск фильмов...">
+            <button><span class="search-icon">🔍</span></button>
+        </div>
+    </section>
+
+    <section class="now-showing">
+        <div class="container">
+            <h2 class="section-title">Сейчас в кино</h2>
+            <div class="movie-list">
+                <a href="movie_details.html" class="movie-card-link" data-movie='{"title":"Веном","rating":6.5,"description":"В этом мире у каждого есть второй шанс","details":"120 мин | Фантастика, Боевик","full_description":"Эдди Брок пытается восстановить свою карьеру журналиста, но его тело становится хозяином инопланетного симбиота Венома, который наделяет его сверхчеловеческими способностями. Вместе они должны противостоять смертельной угрозе, которая может уничтожить их обоих.","year":2023,"poster":"images/s1.jpg","background":"images/s1.jpg", "schedule":{"Вторник, 3 июня":["20:00","23:30"],"Среда, 4 июня":["10:00","14:00","20:00"],"Четверг, 5 июня":["15:00","18:00","22:00"]}}'>
+                    <div class="movie-card">
+                        <img src="images/s1.jpg" alt="Постер фильма Веном">
+                        <div class="rating">6.5</div>
+                        <h3>Веном</h3>
+                        <p class="description">В этом мире у каждого есть второй шанс</p>
+                        <p class="details">120 мин | Фантастика, Боевик</p>
+                        <button>Купить билеты</button>
+                    </div>
+                </a>
+                <a href="movie_details.html" class="movie-card-link" data-movie='{"title":"Человек-Паук: Нет пути домой","rating":7.5,"description":"Питер Паркер обращается за помощью к Доктору Стрэнджу, чтобы все забыли, что он Человек-Паук.","details":"148 мин | Фантастика, Приключения","full_description":"После того как тайна личности Питера Паркера раскрыта, он обращается за помощью к Доктору Стрэнджу, чтобы все забыли, что он Человек-Паук. Однако заклинание идет не так, и в их мир попадают злодеи из других вселенных. Теперь Питеру предстоит столкнуться с врагами, которых он никогда не встречал, и найти способ исправить мультивселенную.","year":2024,"poster":"images/s2.jpg","background":"images/s2.jpg", "schedule":{"Сегодня":["11:00","15:00","19:00"],"Завтра":["12:00","16:00","20:00"]}}'>
+                    <div class="movie-card">
+                        <img src="images/s2.jpg" alt="Постер фильма Человек-Паук">
+                        <div class="rating">7.5</div>
+                        <h3>Человек-Паук: Нет пути домой</h3>
+                        <p class="description">Питер Паркер обращается за помощью к Доктору Стрэнджу, чтобы все забыли, что он Человек-Паук.</p>
+                        <p class="details">148 мин | Фантастика, Приключения</p>
+                        <button>Купить билеты</button>
+                    </div>
+                </a>
+                <a href="movie_details.html" class="movie-card-link" data-movie='{"title":"Первому игроку приготовиться","rating":8.2,"description":"В виртуальном мире OASIS скрыто сокровище, которое изменит судьбу всего человечества.","details":"140 мин | Фантастика, Приключения","full_description":"В 2045 году мир погружен в хаос, и люди находят спасение в виртуальной реальности OASIS. Когда создатель OASIS умирает, он оставляет завещание: его огромное состояние достанется тому, кто первым найдет спрятанное в игре пасхальное яйцо. Уэйд Уоттс, обычный подросток, решает принять участие в этой гонке и сталкивается с неожиданными испытаниями и опасностями.","year":2025,"poster":"images/s3.jpg","background":"images/s3.jpg", "schedule":{"Сегодня, 3 июня":["20:00","23:30"],"Завтра, 4 июня":["03:00","20:00","23:30"],"Четверг, 5 июня":["03:00","20:00","23:30"],"Пятница, 6 июня":["03:00","20:00","23:30"],"Суббота, 7 июня":["03:00","20:00","23:30"]}}'>
+                    <div class="movie-card">
+                        <img src="images/s3.jpg" alt="Постер фильма Первому игроку приготовиться">
+                        <div class="rating">8.2</div>
+                        <h3>Первому игроку приготовиться</h3>
+                        <p class="description">В виртуальном мире OASIS скрыто сокровище, которое изменит судьбу всего человечества.</p>
+                        <p class="details">140 мин | Фантастика, Приключения</p>
+                        <button>Купить билеты</button>
+                    </div>
+                </a>
+                <a href="movie_details.html" class="movie-card-link" data-movie='{"title":"Джокер","rating":7.8,"description":"История становления одного из самых известных злодеев комиксов.","details":"122 мин | Драма, Криминал","full_description":"В Готэм-сити Артур Флек, неудачливый комик, страдающий от психического расстройства, постепенно погружается в безумие и трансформируется в преступного гения, известного как Джокер. Фильм исследует истоки одного из самых культовых злодеев комиксов, показывая, как общество может создать монстра.","year":2024,"poster":"images/s4.jpg","background":"images/s4.jpg", "schedule":{"Сегодня":["10:00","13:00"],"Завтра":["11:00","14:00"]}}'>
+                    <div class="movie-card">
+                        <img src="images/s4.jpg" alt="Постер фильма Джокер">
+                        <div class="rating">7.8</div>
+                        <h3>Джокер</h3>
+                        <p class="description">История становления одного из самых известных злодеев комиксов.</p>
+                        <p class="details">122 мин | Драма, Криминал</p>
+                        <button>Купить билеты</button>
+                    </div>
+                </a>
+                <a href="movie_details.html" class="movie-card-link" data-movie='{"title":"Accidental Lovers","rating":6.5,"description":"Два незнакомца находят любовь в неожиданном месте.","details":"115 мин | Романтика, Комедия","full_description":"Сара и Майкл случайно оказываются в одной каюте круизного лайнера. Первоначально раздраженные этим обстоятельством, они постепенно начинают находить общий язык и понимают, что их случайная встреча может перерасти в нечто большее. Но смогут ли они преодолеть свои предубеждения и прошлые разочарования?","year":2023,"poster":"images/s1.jpg","background":"images/s1.jpg", "schedule":{"Сегодня":["14:00","18:00"],"Завтра":["15:00","19:00"]}}'>
+                    <div class="movie-card">
+                        <img src="images/s1.jpg" alt="Постер фильма Accidental Lovers">
+                        <div class="rating">6.5</div>
+                        <h3>Accidental Lovers</h3>
+                        <p class="description">Два незнакомца находят любовь в неожиданном месте.</p>
+                        <p class="details">115 мин | Романтика, Комедия</p>
+                        <button>Купить билеты</button>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="coming-soon">
+        <div class="container">
+            <h2 class="section-title">Скоро в прокате</h2>
+            <div class="movie-list">
+                <a href="movie_details.html" class="movie-card-link" data-movie='{"title":"Echoes of the Void","rating":7.5,"description":"In a distant future, a lone astronaut discovers a planet teeming with alien...","details":"© 110 мин | Sci-fi","full_description":"Full description for Echoes of the Void goes here.","year":2025,"poster":"images/s1.jpg","background":"images/s1.jpg", "schedule":{"Скоро":["Дата уточняется"]}}'>
+                    <div class="movie-card">
+                        <img src="images/s1.jpg" alt="Постер фильма Echoes of the Void">
+                        <div class="rating">7.5</div>
+                        <h3>Echoes of the Void</h3>
+                        <p class="description">In a distant future, a lone astronaut discovers a planet teeming with alien...</p>
+                        <p class="details">© 110 мин | Sci-fi</p>
+                        <button>Купить билеты</button>
+                    </div>
+                </a>
+                <a href="movie_details.html" class="movie-card-link" data-movie='{"title":"The Secret Garden","rating":8.5,"description":"A young girl discovers a magical world hidden within her backyard.","details":"© 85 мин | Animated","full_description":"Full description for The Secret Garden goes here.","year":2024,"poster":"images/s1.jpg","background":"images/s1.jpg", "schedule":{"Скоро":["Дата уточняется"]}}'>
+                    <div class="movie-card">
+                        <img src="images/s1.jpg" alt="Постер фильма The Secret Garden">
+                        <div class="rating">8.5</div>
+                        <h3>The Secret Garden</h3>
+                        <p class="description">A young girl discovers a magical world hidden within her backyard.</p>
+                        <p class="details">© 85 мин | Animated</p>
+                        <button>Купить билеты</button>
+                    </div>
+                </a>
+                <a href="movie_details.html" class="movie-card-link" data-movie='{"title":"Whispers in the Dark","rating":7.1,"description":"A woman is stalked by a mysterious figure who knows her darkest secrets.","details":"© 100 мин | Thriller","full_description":"Full description for Whispers in the Dark goes here.","year":2025,"poster":"images/s1.jpg","background":"images/s1.jpg", "schedule":{"Скоро":["Дата уточняется"]}}'>
+                    <div class="movie-card">
+                        <img src="images/s1.jpg" alt="Постер фильма Whispers in the Dark">
+                        <div class="rating">7.1</div>
+                        <h3>Whispers in the Dark</h3>
+                        <p class="description">A woman is stalked by a mysterious figure who knows her darkest secrets.</p>
+                        <p class="details">© 100 мин | Thriller</p>
+                        <button>Купить билеты</button>
+                    </div>
+                </a>
+                <a href="movie_details.html" class="movie-card-link" data-movie='{"title":"Cabin 13","rating":5.9,"description":"A group of college students spend a weekend in an abandoned cabin in the...","details":"© 90 мин | Horror","full_description":"Full description for Cabin 13 goes here.","year":2023,"poster":"images/s1.jpg","background":"images/s1.jpg", "schedule":{"Скоро":["Дата уточняется"]}}'>
+                    <div class="movie-card">
+                        <img src="images/s1.jpg" alt="Постер фильма Cabin 13">
+                        <div class="rating">5.9</div>
+                        <h3>Cabin 13</h3>
+                        <p class="description">A group of college students spend a weekend in an abandoned cabin in the...</p>
+                        <p class="details">© 90 мин | Horror</p>
+                        <button>Купить билеты</button>
+                    </div>
+                </a>
+                <a href="movie_details.html" class="movie-card-link" data-movie='{"title":"Echoes of Tomorrow","rating":8.5,"description":"In a dystopian future, a young hacker discovers a hidden message that coul.","details":"© 130 мин | Sci-fi","full_description":"Full description for Echoes of Tomorrow goes here.","year":2025,"poster":"images/s1.jpg","background":"images/s1.jpg", "schedule":{"Скоро":["Дата уточняется"]}}'>
+                    <div class="movie-card">
+                        <img src="images/s1.jpg" alt="Постер фильма Echoes of Tomorrow">
+                        <div class="rating">8.5</div>
+                        <h3>Echoes of Tomorrow</h3>
+                        <p class="description">In a dystopian future, a young hacker discovers a hidden message that coul.</p>
+                        <p class="details">© 130 мин | Sci-fi</p>
+                        <button>Купить билеты</button>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-info">
+                <div class="footer-logo">Аврора</div>
+                <p>Современный кинотеатр с лучшими фильмами и комфортными залами.</p>
+            </div>
+            <div class="footer-nav">
+                <h3>Навигация</h3>
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Фильмы</a></li>
+                    <li><a href="#">Расписание</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Контакты</h3>
+                <p>Москва, ул. Примерная, 123</p>
+                <p>Телефон: +7 (495) 123-45-67</p>
+                <p>Email: admin@mail.tu</p>
+            </div>
+            <div class="footer-hours">
+                <h3>Режим работы</h3>
+                <p>Пн-Чт: 10:00 - 23:00</p>
+                <p>Пт-Вс: 10:00 - 01:00</p>
+                <p>Касса закрывается за 30 минут до последнего сеанса</p>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2024 Кинотеатр. РФ. Все права защищены.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html> 
